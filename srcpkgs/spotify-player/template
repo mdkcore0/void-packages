@@ -4,11 +4,13 @@ version=0.20.7
 revision=1
 build_style=cargo
 # TODO: add dependencies for features
-configure_args="--no-default-features --features media-control,image,notify"
+# configure_args="--no-default-features --features media-control,image,notify"
 # configure_args="--no-default-features --features media-control,image"
+# configure_args="--no-default-features --features media-control,sixel"
+configure_args="--no-default-features --features media-control,sixel,pulseaudio-backend,streaming,notify"
 make_install_args="--path spotify_player"
 hostmakedepends="pkg-config cmake clang rust-bindgen"
-makedepends="openssl-devel alsa-lib-devel dbus-devel libxcb-devel libnotify-devel"
+makedepends="openssl-devel alsa-lib-devel dbus-devel libxcb-devel libnotify-devel libsixel-devel pulseaudio-devel"
 short_desc="Command driven spotify player"
 maintainer="Rodrigo Oliveira <mdkcore@qtrnn.io>"
 license="MIT"
